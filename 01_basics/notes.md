@@ -23,4 +23,4 @@ There are many ways but choose one which is easily readable
 * {} -> they are called scope
 
 ### Note:
-but now we don't use 'var' coz. var didn't have control over scope i.e., if someone use the same variable name under scope (e.g., inside loops) then it changes all the variable name.
+but now we don't use 'var' coz. var didn't have control over scope i.e., if someone use the same variable name under scope (e.g., inside loops) then it changes all the variable name present in the code.
