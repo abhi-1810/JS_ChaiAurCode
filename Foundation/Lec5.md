@@ -26,5 +26,6 @@ In starting days, JS had different standards for different browsers. So, everyon
 8. Object -> will talk about these later
 
 
+
 ### Type of undefined is undefined but the type of null is object. Why?
 --> The reason behind this is that null, in contrast with undefined, was (and still is) often used where objects appear. In other words, null is often used to signify an empty reference to an object. When Brendan Eich created JavaScript, he followed the same paradigm, and it made sense (arguably) to return "object".
