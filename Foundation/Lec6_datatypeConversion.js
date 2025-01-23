@@ -2,7 +2,7 @@ let score = "33abc"
 
 // first find type of the variable. But why to find even it's clear that it is a integer? 
 // because bhot tym hum backend pe kaam krte h aur 
-// frontend wle value send kiye lkin wo value kisi form se aayi ho.. ho skta h score ke andar value string me ho ya object me ho ya kisi aur format me ho. 
+// lkin wo value kisi form se aayi ho.. ho skta h score ke andar value string me ho ya object me ho ya kisi aur format me ho. 
 // E.g., const {score} = req.body // yha hume nhi pta ki score ka type kya h
 
 // console.log(typeof score);
