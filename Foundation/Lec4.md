@@ -10,7 +10,7 @@ There are many ways but choose one which is easily readable
 3. const account_Id
 4. const account_id
 
-## Let, const & Var
+## Let, Const & Var
 * const --> that can't be changed 
 * let --> that can be changed
 * var --> that can also be changed but it may face many issue in block scope and functional scope
