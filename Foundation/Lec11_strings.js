@@ -22,11 +22,13 @@ const gameName = new String('abhijeet')
 // console.log(gameName.charAt('5'));
 // console.log(gameName.indexOf('j'));
 
-const newString = gameName.substring(0, 4) // last index is excluded
-console.log(newString); // --> hi
 
-const anotherString = gameName.slice(-6, 4)
-console.log(anotherString);
+// ******Substring & Slice******
+const newString = gameName.substring(0, 4) // last index is excluded
+console.log(newString); // --> abhi
+
+const anotherString = gameName.slice(-4, 8) // -ve mtlb utna piche se start hoga
+console.log(anotherString); // --> jeet
 
 // substring(): 
 // --> treats -ve indexes as 0
@@ -35,6 +37,16 @@ console.log(anotherString);
 // slice():
 // --> treats -ve indexes as offsets from the end of the string
 // --> returns an empty string if the start index > end index.
+
+
+const newStringOne = "        Abhijeet        "
+console.log(newStringOne);
+console.log(newStringOne.trim());
+
+
+
+
+
 
 
 
