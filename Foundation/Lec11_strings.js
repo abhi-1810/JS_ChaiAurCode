@@ -38,7 +38,7 @@ const gameName = new String('abhijeet')
 // --> treats -ve indexes as offsets from the end of the string
 // --> returns an empty string if the start index > end index.
 
-// ****     10/02/2025     ****
+// **********   10/02/2025   **********
 // trim():
 // use: in input form(like on website) sometimes user give many spaces but we don't want this spaces(except in password field) so we use trim()
 const newStringOne = "        Abhijeet        "
