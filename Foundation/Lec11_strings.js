@@ -24,11 +24,11 @@ const gameName = new String('abhijeet')
 
 
 // ******Substring & Slice******
-const newString = gameName.substring(0, 4) // last index is excluded
-console.log(newString); // --> abhi
+// const newString = gameName.substring(0, 4) // last index is excluded
+// console.log(newString); // --> abhi
 
-const anotherString = gameName.slice(-4, 8) // -ve mtlb utna piche se start hoga
-console.log(anotherString); // --> jeet
+// const anotherString = gameName.slice(-4, 8) // -ve mtlb utna piche se start hoga
+// console.log(anotherString); // --> jeet
 
 // substring(): 
 // --> treats -ve indexes as 0
@@ -38,15 +38,32 @@ console.log(anotherString); // --> jeet
 // --> treats -ve indexes as offsets from the end of the string
 // --> returns an empty string if the start index > end index.
 
-
+// trim():
+// use: in input form(like on website) sometimes user give many spaces but we don't want this spaces(except in password field) so we use trim()
 const newStringOne = "        Abhijeet        "
-console.log(newStringOne);
-console.log(newStringOne.trim());
+// console.log(newStringOne);
+// console.log(newStringOne.trim());
+
+// // trimStart():
+// console.log(newStringOne.trimStart());
+// // trimEnd():
+// console.log(newStringOne.trimEnd());
 
 
+// replace():
+// browser converts spaces into the code "%20" which is the standard URL encoding for a space character. 
+const url = "https://abhijeet.com/abhijeet%20kumar"
+console.log(url);
+console.log(url.replace('%20', '-'));
+
+// check present or not
+console.log(url.includes('abhi')) // --> true
+console.log(url.includes('namaste')) // --> false
 
 
-
+// slpit(): it takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+const lastString = "abhi-jeet-1810"
+console.log(lastString.split('-'));
 
 
 
