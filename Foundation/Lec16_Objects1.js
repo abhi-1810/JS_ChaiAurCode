@@ -52,4 +52,4 @@ JsUser.email = "raunak@gmail.com"
 console.log(JsUser.email);
 Object.freeze(JsUser) // this will prevent the modification
 JsUser.email = "raushan@gmail.com"
-console.log(JsUser.email); // pehle wla o/p hi aayega
+console.log(JsUser.email); // pehle wla o/p hi aayega {"raunak@gmail.com"}
