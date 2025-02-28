@@ -28,7 +28,7 @@ const JsUser = {
 console.log(JsUser.email) // but can't use everytime
 
 // 2nd way
-// console.log(JsUser[email]); // 2nd way // O/P: Error (email is not defined) 
+// console.log(JsUser[email]); // 2nd way // O/P: Error (email is not defined)
 // In dot notation, we use JsUser.email, which is correct.
 // In bracket notation, we must use a string key:
 console.log(JsUser["email"]); // O/P: abhijeet@google.com
