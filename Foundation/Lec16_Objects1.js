@@ -9,9 +9,13 @@
 // Constructor se jab banega tab hmesa *Singleton* banega
 
 // ***** Object literals *****
+const mySym = Symbol("key1")
+
 const JsUser = {
     name: "Abhijeet", // by default system name ko "name"{string} ki trrhh process krta h
     "full name": "Abhijeet Kumar",
+    // mySym: "mykey1", {wrong method of symbol declaration}
+    [mySym]: "mykey1",
     age: 23,
     location: "Vaishali",
     email: "abhijeet@google.com",
@@ -34,8 +38,18 @@ console.log(JsUser["email"]); // O/P: abhijeet@google.com
 console.log(JsUser["full name"]);
 
 
-const mySym = Symbol("key1")
+// *****Interview Question*****
+// Ques. Create a symbol then add it to key of an object and print it
+// console.log(JsUser.mySym); // O/P: mykey1
+// output to mykey1 aayega but iska datatype Symbol nhi hoga
+// console.log(typeof JsUser.mySym); // O/P: string [yha pe interviewer question krega]
 
+console.log(JsUser[mySym]); // these are correct ways
+console.log(typeof [mySym]);
 
-myArr = ["a", "i"]
-myArr[1 ]
+// change value
+JsUser.email = "raunak@gmail.com"
+console.log(JsUser.email);
+Object.freeze(JsUser) // this will prevent the modification
+JsUser.email = "raushan@gmail.com"
+console.log(JsUser.email); // pehle wla o/p hi aayega
