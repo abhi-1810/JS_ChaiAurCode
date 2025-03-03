@@ -25,17 +25,17 @@ const JsUser = {
 
 // How to access Objects: 2 ways
 // 1st way
-console.log(JsUser.email) // but can't use everytime
+// console.log(JsUser.email) // but can't use everytime
 
 // 2nd way
 // console.log(JsUser[email]); // 2nd way // O/P: Error (email is not defined)
 // In dot notation, we use JsUser.email, which is correct.
 // In bracket notation, we must use a string key:
-console.log(JsUser["email"]); // O/P: abhijeet@google.com
+// console.log(JsUser["email"]); // O/P: abhijeet@google.com
 
 // ** why to use 2nd way?
 // e.g., "full name": "Abhijeet Kumar", now there is no chance to access this using 1st way so in this case we use 2nd case
-console.log(JsUser["full name"]);
+// console.log(JsUser["full name"]);
 
 
 // *****Interview Question*****
@@ -44,12 +44,22 @@ console.log(JsUser["full name"]);
 // output to mykey1 aayega but iska datatype Symbol nhi hoga
 // console.log(typeof JsUser.mySym); // O/P: string [yha pe interviewer question krega]
 
-console.log(JsUser[mySym]); // these are correct ways
-console.log(typeof [mySym]);
+// console.log(JsUser[mySym]); // these are correct ways
+// console.log(typeof [mySym]);
 
 // change value
 JsUser.email = "raunak@gmail.com"
-console.log(JsUser.email);
-Object.freeze(JsUser) // this will prevent the modification
+// console.log(JsUser.email);
+// Object.freeze(JsUser) // this will prevent the modification
 JsUser.email = "raushan@gmail.com"
-console.log(JsUser.email); // pehle wla o/p hi aayega {"raunak@gmail.com"}
+// console.log(JsUser.email); // pehle wla o/p hi aayega {"raunak@gmail.com"}
+
+JsUser.greeting = function() {
+    console.log("Hello JS user");
+}
+JsUser.greetingTwo = function() {// 
+    console.log('Hello JS user, ${this.name}');
+}
+
+console.log(JsUser.greeting()); // O/P: undefined (reason aage)
+console.log(JsUser.greetingTwo());
