@@ -22,5 +22,5 @@ const regularUser = {
 }
 console.log(regularUser.fullname.userfullname.firstname);
 // let's suppose fullname don't exist, then what to do?
-// Optional chaining(?.) comes into the picture, it will execute the statement even some value is not present. It reduces the work for if-else statements.
+// Optional chaining(?.) comes into the picture, it will execute the statement even some value is not present. It reduces the work by not using if-else statements.
 
