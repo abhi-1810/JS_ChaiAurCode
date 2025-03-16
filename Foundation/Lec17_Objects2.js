@@ -29,6 +29,7 @@ const regularUser = {
 // Optional chaining(?.) comes into the picture here, it will execute the statement even some value is not present. It reduces the work by not using if-else statements.
 
 
+// (16/03/2025)
 // **** Combining 2 Array's ****
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
