@@ -41,6 +41,7 @@ function addTwoNumbers(number1, number2) { // these two are parameters
 
 // addTwoNumbers() // O/P: NaN [coz. avi value nhi pta]
 // addTwoNumbers(3, 4) // these are arguments    // O/P: 7
+
 // addTwoNumbers("abhi", "jeet")    // O/P: abhijeet
 // addTwoNumbers(3, "4") // O/P: 34 [JS converts 3 to "3" and perform string concatenation]
 // addTwoNumbers("3", "4") // O/P: 34 [string concatenation]
@@ -48,5 +49,9 @@ function addTwoNumbers(number1, number2) { // these two are parameters
 // addTwoNumbers(3, null) // O/P: 3
 // the above things happen coz. we didn't check for datatype in our function
 
+addTwoNumbers(3, 5) // O/P: 8
+// now store it in variable
 const result = addTwoNumbers(3, 5)
 console.log("Result: ", result);
+
+
