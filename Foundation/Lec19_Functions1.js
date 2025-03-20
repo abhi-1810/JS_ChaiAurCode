@@ -49,7 +49,7 @@ function sayMyName() {
 // addTwoNumbers("3", "4") // O/P: 34 [string concatenation]
 // addTwoNumbers(3, "a") // O/P: 3a
 // addTwoNumbers(3, null) // O/P: 3
-// the above things happen coz. we didn't check for datatype in our function
+// the above things happen coz. we didn't check for datatype in our function (in typescript datatype is checked)
 
 // addTwoNumbers(3, 5) // O/P: 8
 
