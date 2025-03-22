@@ -14,6 +14,8 @@
 // --> When {} is used in control structures like if, for, or functions, it defines a block scope.
 // --> When {} is used to create an object, it represents an object literal. Objects store key-value pairs.
 
+
+// **** (22/03/2025) ****
 // problem arises here
 // if (true) {
 //     let a = 10
