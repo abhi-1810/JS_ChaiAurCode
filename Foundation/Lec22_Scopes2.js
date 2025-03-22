@@ -43,7 +43,7 @@ if (true) {
 
 
 // ++++++++++++++++ Interesting +++++++++++++++++
-// Hoisting
+// Hoisting (This is just intro, will see in details later)
 
 
 // **** This is called as Function Declaration ****
