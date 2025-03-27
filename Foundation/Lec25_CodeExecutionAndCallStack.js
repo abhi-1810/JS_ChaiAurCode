@@ -25,3 +25,23 @@
 // 1. Memory Creation Phase (or creation phase)
 // 2. Execution Phase
 
+
+
+
+
+
+
+// function one() {
+//     console.log("one")
+//     two()
+// }
+// function two() {
+//     console.log("two")
+//     three()
+// }
+// function three() {
+//     console.log("three")
+// }
+// one() 
+// two()
+// three()
