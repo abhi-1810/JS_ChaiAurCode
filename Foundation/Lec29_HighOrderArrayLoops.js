@@ -1,6 +1,6 @@
-//#region  High Order Array loops          (09/04/2025)
+#  High Order Array loops          (09/04/2025)
 
-//#region  for of
+## for of
 
 // ["", "", ""]  // array containing strings
 // [{}, {}, {}]  // array containing objects
