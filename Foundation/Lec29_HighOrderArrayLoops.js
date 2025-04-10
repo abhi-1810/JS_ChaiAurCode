@@ -98,7 +98,9 @@ for (const key in programming) {
 for (const key in programming) {
     // console.log(`${key} is for ${programming[key]}`);
 }
-// Arrays ki v key hoti h jo 0 se start hoti h but objects me hum jo mann kre wo key daal skte h
+// Arrays ki v key hoti h jo 0 se start hoti h aur srf. numeric hoti h but objects me hum jo mann kre wo key daal skte h
+
+
 
 // ***** QUESTION *****
 // Can we use for-in loop on Map?
@@ -110,7 +112,84 @@ map.set('Fr', "France")
 map.set('IN', "India")
 
 for (const key in map2) {
-    console.log(key); // doesn't print anything coz. Map is not iterable with for-in, it only iterate with for-of
+    // console.log(key); // doesn't print anything coz. Map is not iterable with for-in, it only iterate with for-of
 }
 // Why?
 // for...in is for enumerating object properties, not iterable values. Since Map isn't a plain object, it won't iterate through its keys and values.
+
+
+
+
+// (10/04/2025)
+// DIFFERENCE BETWEEN FOR-OF & FOR-IN LOOP:
+
+// for...of loop
+// --> Iterates over iterable values, such as arrays, strings, maps, sets, etc.
+// --> Returns values, not keys or indices.
+
+// for...in loop
+// --> Iterates over enumerable property keys (i.e., property names) of an object.
+// --> Works for objects and arrays, but returns keys, not values.
+
+
+
+// for-each
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+// SYNTAX:
+// coding.forEach( function name(params) {
+
+// } )
+// ye callback func. h to isme name nhi hoga aur q ki ye func. array ke andar chl rha to params ke jagah kuch v likh skte like value, num, item, etc.
+
+// coding.forEach(function (item) {
+//     console.log(item);
+// })
+
+
+// but it's not necessary to use only normal function, we can use Arrow function as well.
+// coding.forEach( varName = () => {
+    
+// } )
+// isme v name hta denge coz. store krne ki jroort nhi h
+
+// coding.forEach( (item) => {
+//     console.log(item);
+// } )
+
+
+// function printMe(item) {
+//     console.log(item);
+// }
+// coding.forEach(printMe)  // yha function execute nhi krna h (printMe(), srf. reference dena h baaki printing ka kaam wo khud kr lega)
+
+
+// coding.forEach( (item) => {
+//     console.log(item);
+// } )
+// yha pe srf. item nhi aata h iske saath aur v parameters ka access hota h jaise index, array ki puri list
+
+// coding.forEach( (item, index, arr) => {
+//     console.log(item, index, arr);
+// } )
+
+
+// ***** MULTIPLE OBJECTS IN ARRAY *****
+const myCoding = [
+    {
+        languageName: "javascipt",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    },
+]
+
+myCoding.forEach( (item) => {
+    console.log(item);
+} )
