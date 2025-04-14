@@ -9,4 +9,4 @@ coding.forEach( item => {
 const values = coding.forEach( item => {
     console.log(item);
 })
-console.log(values); 
+console.log(values);
