@@ -51,7 +51,7 @@ map.set('IN', "India") // ye nhi aayega coz. Map duplicate value nhi leta
 // }
 
 // If we don't want array form & want to destructure the array:
-for (const [key, value] of map) {
+for (const [key, value] of map) {     // [key, value] is the destructuring syntax
     // console.log(key, ':-', value);
 }
 
@@ -92,7 +92,7 @@ const myObject2 = {
 const programming = ["js", "rb", "py", "java", "cpp"]
 
 for (const key in programming) {
-    // console.log(key);
+    // console.log(key);         // o/p: 0 1 2 3 4 [for-in loop is used to iterate over the keys]
 }
 // ye to key print krega but Value kaise nikalenge?
 for (const key in programming) {
@@ -133,7 +133,16 @@ for (const key in map2) {
 
 
 
-// for-each
+
+
+// ******** for-each ********
+
+// BASIC SYNTAX:
+// array.forEach(function(currentValue, index(optional), array(optional)) {
+//     // your code here
+// });
+
+
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // SYNTAX:
@@ -191,7 +200,7 @@ const myCoding = [
 ]
 
 myCoding.forEach( (item) => {
-    console.log(item);
+    // console.log(item);
     // console.log(item.languageName);
     // console.log(item.languageFileName);
 } )
