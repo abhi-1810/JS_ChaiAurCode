@@ -88,6 +88,8 @@ const books = [
 
 
 
+
+
 // ***** MAP *****
 // Task: add 10 to all the numbers in the given array
 const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -125,3 +127,54 @@ const newNums5 = myNumers
 // Purpose: Transforms each element in the array.
 // Returns: A new array with the same number of elements, but each one is modified.
 // Callback: Should return the transformed value for each item.
+
+
+
+
+
+
+
+// ***** REDUCE *****
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
+const myNums1 = [1, 2, 3]
+
+const myTotal = myNums1.reduce(function (accumulator, curVal) {
+    // console.log(`accumulator: ${accumulator} and curVal: ${curVal}`);
+    return accumulator + curVal
+}, 0)
+// console.log(myTotal);
+
+
+// Using ARROW Function
+const myTotal1 = myNums1.reduce( (accumulator, curVal) => accumulator + curVal, 0)
+// console.log(myTotal1);
+
+
+
+
+// EXAMPLE:
+const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
+
+// TASK: add the prices of all items in shoppingCart
+
+const totalValue = shoppingCart.reduce( (accumulator, curPrice) => accumulator + curPrice.price, 0) // dot(.) lgaye q ki object ke andar se access lena h
+
+console.log(totalValue);
