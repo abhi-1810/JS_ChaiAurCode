@@ -17,25 +17,27 @@
 </body>
 <script>
     const parent = document.querySelector('.parent')
-    // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[1]);
-    // console.log(parent.children[1].innerHTML);
+    // console.log(parent);             // o/p: pura div aa jayega
+    // console.log(parent.children);    // o/p: chaaro parent div aayega HTMLCollection me
+    // console.log(parent.children[1]); // o/p: 2nd children aayega
+    // console.log(parent.children[1].innerHTML); // o/p: 2nd children ka srf. Text aayega [Tuesday]
 
-    // ab ispe loop lgate h, array nhi h but similar to array h to classic for loop lga skte h
-    for (let i = 0; i < parent.children.length; i++) { // srf. parent dene so nhi hoga coz. ye HTMLCollection nhi h to parent.children krna hoga aur .length uska length dega
-        // console.log(parent.children[i].innerHTML);
+    // ab ispe loop lgate h, array nhi h but similar to array h toh classic for loop lga skte h
+    for (let i = 0; i < parent.children.length; i++) { // srf. parent dene se nhi hoga coz. ye HTMLCollection nhi h to parent.children krna hoga aur .length uska length dega
+        // console.log(parent.children[i].innerHTML);  o/p: Monday,Tuesday, Wednesday, Thursday (chaaro child ka text)
     }
-    parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
 
+    parent.children[1].style.color = "orange" // Tuesday ka color change krega
+    // console.log(parent.firstElementChild); // phla Child element dega
+    // console.log(parent.lastElementChild);  // last Child dega
+
+    // ** How to find Parent Element? **
     const dayOne = document.querySelector('.day')
-    // console.log(dayOne);
-    // console.log(dayOne.parentElement);
-    // console.log(dayOne.nextElementSibling);
+    // console.log(dayOne);   // o/p: <div class="day">Monday</div>
+    // console.log(dayOne.parentElement);  // o/p: <div class="parent">...</div>
+    // console.log(dayOne.nextElementSibling); // o/p: <div class="day">Tuesday</div>
 
-    console.log("NODES: ", parent.childNodes); // 9 value aayegi coz. HTML me line break v count hota h as a text. 1 se jyaada line break count nhi hoga
+    // console.log("NODES: ", parent.childNodes); // 9 value aayegi coz. HTML me line break v count hota h as a text. 1 se jyaada line break count nhi hoga
     
 </script>
 </html>
