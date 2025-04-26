@@ -176,6 +176,8 @@ false == ""   // O/P: true
 
 // Nullish Coalescing Operator (??): 
 // isme puri kahani bs ye 2 keywords pe based h: null, undefined
+// it is a logical operator that returns the right-hand side operand if the left-hand side operand is null or undefined. 
+// Otherwise, it returns the left-hand side operand
 
 let val1;
 val1 = 5 ?? 10
