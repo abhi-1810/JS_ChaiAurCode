@@ -1,20 +1,8 @@
 .container {
-    width: auto;
-    height: auto;
+    width: 575px;
+    height: 825px;
     background-color: rgb(136, 127, 255);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vh;
-}
-
-p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 30px;
 }
   
 #height, #weight {
@@ -29,7 +17,7 @@ p {
 }
   
 #results {
-    font-size: 35px;
+    font-size: 20px;
     margin-left: 90px;
     margin-top: 20px;
     color: rgb(241, 241, 241);
@@ -58,4 +46,4 @@ h1 {
   
 #validHeight, #validWeight {
     color: red;
-}  
+}
