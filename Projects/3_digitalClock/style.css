@@ -11,7 +11,7 @@ body {
   flex-direction: column;
 }
 
-span {
+#banner {
     font-size: 50px;
 }
 
