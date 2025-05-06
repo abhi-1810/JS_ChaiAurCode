@@ -1,0 +1,61 @@
+<!-- Edit and remove elements in DOM          (22/04/2025) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Task: we have to add a list item
+    // there are many ways to add; one of them is to simply select a parent item and add list to it
+    // BUT here we add list item using function
+    function addLanguage(langName) {
+        const li = document.createElement('li');     
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    // this is the most basic idea one can have but here the problem is '.appendChild' whenever we add new language it traverses the whole tree in document which is not efficient
+
+
+    // **** Optimised ****
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName)) 
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('goLang')
+
+
+
+    // **** EDIT ****
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"     // not optimised
+
+    // ****Optimised ****
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi)
+
+
+    // **** EDIT Method-2****
+    const firstLang = doc
+    ument.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScipt</li>'
+
+
+
+    // **** REMOVE ****
+    const lastLang = document.querySelector('li: last-child')
+    langLang.remove()
+</script>
+</html>
