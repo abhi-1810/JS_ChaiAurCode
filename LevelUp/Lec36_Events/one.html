@@ -1,3 +1,4 @@
+<!-- EVENTS in JavaScript          (05/05/2025 - 09/05/2025) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,21 +20,104 @@
     </div>
 </body>
 <script>
-    // First Approach: we can add onclick just after alt tag.
+    // Approaches of adding Event Listener
+    // First Approach: 
+    // we can add onclick just after alt tag.
 
     // 2nd Approach:
     //  document.getElementById('owl').onclick = function () {
     //     alert("owl clicked")
-    //  } // this is also not a best approach
+    //  } // this is also not a best approach coz. this will not give much info., so we should use Event Listener coz. of it's ability of propagation
 
     // 3rd Approach:
-    document.getElementById('owl').addEventListener('click', function() {
-        alert("owl clicked again")
+    // document.getElementById('owl').addEventListener('click', function() {
+    //     alert("owl clicked again")
+    // })
+
+    // Few More approaches:
+    // --> use attachEvent() instead of addEventListener: this was used in early days when internet explorer is difficult to use
+    // --> jQuery: this has on eventListener
+
+
+    // things to learn:
+    // type(like keyboard events, mouse events), timestamp, defaultPrevented,
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // Best way to write eventListener
+    // document.getElementById('owl').addEventListener('click', function(e) { // e is event object
+    //     console.log(e);
+    // }, false) // false is default and it is called Event bubbling but it's good to remember this for interview purpose
+
+
+    // Event Propagation:- movement of Events through the DOM
+    // There are two types of event propagation: bubbling and capturing. In market we mostly use bubbling.
+
+    // --> Bubbling: When an event happens on a component, it first runs the event handler on it, then on its parent component, then all the way up on other ancestors’ components. By default, all event handles through this order from center component event to outermost component event.
+    // --> Capturing: opp. of bubbling. The event handler is first on its parent component and then on the component where it was actually wanted to fire that event handler. In short, it means that the event is first captured by the outermost element and propagated to the inner elements. It is also called trickle down.
+
+
+    // Example of Bubbling(inside to outside or bottom to top):
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //     console.log("owl clicked");
+    // }, false)
+
+    // but suppose we don't want EventBubbling i.e., inner and outer element remains different
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //     console.log("owl clicked");
+    //     e.stopPropagation();
+    // }, false)
+
+    // Example of Capturing(outside to inside or top to bottom):
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //     console.log("owl clicked");
+    // }, true)
+
+
+    // ** preventDefault() **
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+
+    // ** TASK: remove the images when clicked **
+    // document.querySelector('#images').addEventListener('click', function (e) {
+    //     // console.log(e);
+    //     // console.log(e.target);
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove() // 1st way
+    //     // removeIt.parentNode.removeChild(removeIt) // 2nd way
+    // })
+
+
+    // the above approach images but images also removed if we clicked on blank space,
+    // so we have to do strict check
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
     })
 
-    
-    document.getElementById('owl').addEventListener('click', function(e) {
-        console.log(e);
-    }, false)
-</script>
+ </script>
 </html>
