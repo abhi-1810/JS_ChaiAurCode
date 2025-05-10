@@ -1,0 +1,57 @@
+<!-- setInterval          (10/05/2025) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("Abhijeet");
+    //     console.log("Abhijeet", Date.now()); // to see it more clearly
+    // }, 1000)
+
+
+    // another way
+    // const sayDate = function(){
+    //     console.log("Abhijeet", Date.now());
+    // }
+    // setInterval(sayDate, 1000)
+
+
+    // setInterval also have 3rd parameter
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+    // setInterval(sayDate, 1000, "Abhi")
+
+
+    // to stop this we have clearInterval():
+    // const intervalId = setInterval(sayDate, 1000, "Abhi")
+    // clearInterval(intervalId)  // this will clear the intervals
+
+
+    // but our goal is to: start execution when we click start and stop it when click on stop (This is HW)
+
+    let intervalId = null;
+    document.querySelector('#start').addEventListener('click', function() {
+        if (intervalId === null) { // Prevent multiple intervals
+            intervalId = setInterval(sayDate, 1000, "Abhi")
+            console.log("START");
+        }
+    })
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearInterval(intervalId)
+        intervalId = null;  // Reset the intervalId so you can restart
+        console.log("STOP");
+    })
+
+</script>
+</html>

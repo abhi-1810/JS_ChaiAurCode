@@ -1,0 +1,48 @@
+<!-- setTimeout          (10/05/2025) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // **** setTimeout ****
+    // setTimeout(function() {
+    //     console.log("Abhijeet");
+    // }, 2000)
+
+    // another way
+    const sayAbhi = function() {
+        console.log("Abhijeet");
+    }
+    setTimeout(sayAbhi, 2000)
+
+    // Now we want to change the content of h1
+
+    // document.querySelector('h1').innerHTML = "Best JS Series"
+    // this will immediately change it but we want changes after 2 sec.
+
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Best JS Series"
+    }
+    // setTimeout(changeText, 2000)
+
+    // Now we want that if we click on stop button then the changes should stop and h1 text should remains same
+    // So for this we use clearTimeout() but for this we have to use reference
+
+    // const doNotChangeMe = setTimeout(changeText, 2000)
+    // clearTimeout(doNotChangeMe)
+    // this will permanently stop the changes but this is also not good. So we use it with event (here button)
+
+    const doNotChangeMe = setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(doNotChangeMe)
+        console.log("STOPPED");
+    })
+</script>
+</html>
