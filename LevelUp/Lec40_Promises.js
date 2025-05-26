@@ -1,5 +1,8 @@
 // Promise in JavaScript          (13/05/2025)
 
+// Simple Definition:
+// jo v hmne task diya h wo avi ke avi complete nhi hoga. Queue me lg jayega lkin load/complete turant nhi hoga
+
 // Declaration of Promies:
 // const promiseOne = new Promise()
 
@@ -7,12 +10,12 @@
 // in starting there is no fetch, then, catch so developer use promise libraries like Q or bluebird 
 
 
-const promiseOne = new Promise(function(resolve, reject) {
+const promiseOne = new Promise(function(resolve, reject) { // promise ya to pura hoga nhi to nhi hoga.. pura hua to resolve wrna reject
     // Do an Async Task
-    // DB calls, cryptography, network
+    // Async tasks example: DB calls, cryptography, network
     setTimeout(function() {
         console.log("Aysnc task is complete");
-        resolve()
+        resolve() // ye .then ko inform krega ki ab apna kaam kr lo
     }, 1000)
 })
 // but the quest. is yha pe resolve & reject ne kiya kya h?
@@ -29,7 +32,7 @@ promiseOne.then(function() {    // then is related to resolve
 new Promise(function(resolve, reject){
     setTimeout(function() {
         console.log("Async Task 2");
-        resolve()
+        resolve() // ye .then ko inform krega ki ab apna kaam kr lo
     }, 1000)
 }).then(function(){
     console.log("Async 2 resolved");   
@@ -38,6 +41,10 @@ new Promise(function(resolve, reject){
 
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function() {
-        
-    }, 1000)
+        resolve({username: "Chai", email: "chai@example.com"}) // informa .then to execute
+    }, 1000) 
+})
+
+promiseThree.then(function(username){
+
 })
