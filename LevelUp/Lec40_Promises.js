@@ -38,13 +38,43 @@ new Promise(function(resolve, reject){
     console.log("Async 2 resolved");   
 })
 
-
+// resolve ke andar hum parameter me kuch data v pass kr skte h
+// kuch v pass kr skte h e.g., Array, function, objects, etc.. but mostly we pass object
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function() {
-        resolve({username: "Chai", email: "chai@example.com"}) // informa .then to execute
+        resolve({username: "Chai", email: "chai@example.com"}) // inform .then to execute
     }, 1000) 
 })
 
-promiseThree.then(function(username){
+promiseThree.then(function(user){
+    console.log(user);
+})
 
+
+// here we see the use of reject
+// ** Chaining **
+const promiseFour = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        // we use if-else to perform resolve and reject both
+        if (!error) {
+            resolve({username: "abhijeet", password: "abcd"})
+        } else {
+            reject('ERROR: Something went wrong')
+        }
+    }, 1000)
+})
+
+promiseFour.then((user) => {
+    console.log(user);
+    return user.username 
+    // ab ye upar wli value return kaha pe hogi? iske liye hum use krenge .then ki chaining
+}).then((myUsername) => {
+    // new chain me upar wli chain ki return value aayegi
+    console.log(myUsername); // avi v error aayega to hume catch use krna hoga
+}).catch(function(error){
+    console.log(error);
+}).finally(() => {
+    // finally hmesa hi execute hoga
+    console.log("The promise is either resolved or rejected");
 })
