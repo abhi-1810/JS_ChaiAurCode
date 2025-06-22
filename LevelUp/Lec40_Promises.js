@@ -51,6 +51,13 @@ promiseThree.then(function(user){
 })
 
 
+
+
+// ******** 22/06/2025 ********
+
+
+
+
 // here we see the use of reject
 // ** Chaining **
 const promiseFour = new Promise(function(resolve, reject){
