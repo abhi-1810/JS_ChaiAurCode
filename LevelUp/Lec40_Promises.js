@@ -84,4 +84,33 @@ promiseFour.then((user) => {
 }).finally(() => {
     // finally hmesa hi execute hoga
     console.log("The promise is either resolved or rejected");
-})
+}) 
+
+
+
+
+// ***** 23/06/2025 *****
+
+
+
+// Similar to above but here we use async await
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if (!error) {
+            resolve({username: "javascript", password: "abcd"})
+        } else {
+            reject('ERROR: JS went wrong')
+        }
+    }, 1000)
+});
+
+async function consumePromiseFive(){
+    try {
+        const response = await promiseFive
+        console.log(response);
+    } catch (error) {
+        console.log(error); 
+    }
+}
+consumePromiseFive()
